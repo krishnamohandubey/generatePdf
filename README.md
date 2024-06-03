@@ -46,3 +46,18 @@ This microservice takes user data as input, processes it through a Thymeleaf tem
    ```sh
    git clone https://github.com/krishnamohandubey/generatePdf.git
    cd generatePdf
+
+2. **Call Microservice**
+
+   ```sh
+   curl --location 'http://localhost:9090/generate-pdf' \
+         --header 'Content-Type: application/json' \
+         --data-raw '{
+             "name": "Krishna",
+             "email": "krishna@example.com",
+             "mobile": "99966666666",
+             "address": "full address"
+         }'
+   
+
+   
